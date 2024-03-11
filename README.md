@@ -3,6 +3,7 @@
 - Configure TailwindCSS
 -Header
 -Login Form
+-SignUp
 
 #Features
 -Login/Signup
