@@ -2,8 +2,21 @@
 - Create React App
 - Configure TailwindCSS
 -Header
+-routing
 -Login Form
 -SignUp
+-validation
+-useRef Hook
+-firebase setup
+-deploying our app to production
+-create signup user in firebase
+-implement signin user API
+-Created our redux store with userSlice
+-implement sign out
+-Update Profile 
+-BugFix -Sign up user displayName and profile photo
+-Bugfix -If the user is not logged in then Redirect/ browse to Login Page and vice-versa
+-Bugfix - unsubscribed to the onauthstate change callback
 
 #Features
 -Login/Signup
