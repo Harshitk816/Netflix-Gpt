@@ -28,7 +28,7 @@ const Header = () => {
         // ...
       }
 
-      return ()=> unsubscribe; //when component unmounts, we will also unsubscibe  the listener onAuthStateChange
+      return ()=> unsubscribe(); //when component unmounts, we will also unsubscibe  the listener onAuthStateChange
 
     });
   },[]);

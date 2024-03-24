@@ -17,6 +17,17 @@
 -BugFix -Sign up user displayName and profile photo
 -Bugfix -If the user is not logged in then Redirect/ browse to Login Page and vice-versa
 -Bugfix - unsubscribed to the onauthstate change callback
+-Add hardcoded values to the constants.js
+-Register TMDB API and create an app to get access token
+-Get data from TMDB now playing movies list API
+-Custom hook for now playing movies
+-Create movieSlice
+-Update Store with movies data
+-Planning for main and secondary container
+-Fetch data fro trailer video
+-Update store with trailer video
+-Embedded the youtube video and made it autoplay and mute
+-Added tailwind styles
 
 #Features
 -Login/Signup
