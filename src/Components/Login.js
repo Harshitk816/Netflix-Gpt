@@ -3,7 +3,7 @@ import { checkValidData } from '../Utils/validate'
 import Header  from './Header';
 import { auth } from '../Utils/firebase';
 import {useDispatch} from 'react-redux'
-import { addUser } from '../Utils/userSlice';
+import { addUser } from '../Redux/Slices/userSlice';
 
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { BACKGROUND, USER_AVATAR } from '../Utils/constants';
