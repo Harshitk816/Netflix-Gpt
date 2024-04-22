@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 const SecondaryContainer = () => {
     const movies = useSelector(store=>store.movies);
   return movies && (
-    <div className='bg-black'>
+    <div className='bg-black w-screen'>
         {/* 
             Movielist - Popular
                 moviecards*n

@@ -37,6 +37,10 @@
 -GPT search bar
 -Multi-language feature(Feature)
 -Integrate GPT APIs (get OpenAI )
+-Implement Search Results 
+-secret key into env file
+-memoization done 
+
 
 #Features
 -Login/Signup
