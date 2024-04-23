@@ -39,10 +39,10 @@ const SearchBar = () => {
     dispatch(addGptMovieResult({movieNames: gptMovies, movieResults: tmdbResults}));
   }
   return (
-    <div className='pt-[10%] flex justify-center'>
-      <form className=' w-1/2 bg-black grid grid-cols-12 rounded-md' onSubmit={(e)=>{e.preventDefault()}}>
-        <input ref={searchText} type='text' className='p-4 col-span-8 m-4 rounded-md' placeholder={lang[langKey].searchBarPlaceholder}></input>
-        <button onClick={handleGptSearchClick} className='py-2 px-4 bg-red-700 col-span-4 m-4 text-white rounded-md'>{lang[langKey].search}</button>
+    <div className='pt-[45%] md:pt-[10%] lg:md:pt-[10%] flex justify-center'>
+      <form className=' w-[90%] md:w-1/2 lg:md:w-1/2 bg-black grid grid-cols-12 rounded-md' onSubmit={(e)=>{e.preventDefault()}}>
+        <input ref={searchText} type='text' className='p-2 px-4 md:p-4 lg:p-4 col-span-8 m-4 rounded-md text-sm md:text-lg lg:text-lg' placeholder={lang[langKey].searchBarPlaceholder}></input>
+        <button onClick={handleGptSearchClick} className='py-0 md:py-2 lg:py-2 px-4 bg-red-700 col-span-4 m-4 text-white rounded-md text-sm md:text-lg lg:text-lg '>{lang[langKey].search}</button>
       </form>
     </div>
   )

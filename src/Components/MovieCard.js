@@ -10,7 +10,7 @@ const MovieCard = ({posterPath, title, avgRating}) => {
     setIsHover(false);
   }
   if(!posterPath){
-    return ( <div className='w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onMouseOut={handleHover2} onMouseOver={handleHover1}> 
+    return ( <div className='w-36 md:w-48 lg:w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onMouseOut={handleHover2} onMouseOver={handleHover1}> 
     <img
     alt='Movie Card'
     src="https://media.comicbook.com/files/img/default-movie.png">
@@ -27,7 +27,7 @@ const MovieCard = ({posterPath, title, avgRating}) => {
   }
  
   return (
-    <div className='w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onMouseOut={handleHover2} onMouseOver={handleHover1}> 
+    <div className='w-36 md:w-48 lg:w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onMouseOut={handleHover2} onMouseOver={handleHover1}> 
         <img
         alt='Movie Card'
         src={IMG_CDN_URL+posterPath}>

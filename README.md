@@ -37,9 +37,12 @@
 -GPT search bar
 -Multi-language feature(Feature)
 -Integrate GPT APIs (get OpenAI )
+-GPT search API calls
+-fetched gpt MovieSuggestions
 -Implement Search Results 
 -secret key into env file
 -memoization done 
+-responsiveness done
 
 
 #Features
