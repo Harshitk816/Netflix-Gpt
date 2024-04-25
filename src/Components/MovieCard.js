@@ -1,8 +1,21 @@
 import React, { useState } from 'react'
 import { IMG_CDN_URL } from '../Utils/constants'
+import MovieDetail from './MovieDetail';
+import {useDispatch} from  "react-redux";
+import { toggleDetailView } from '../Redux/Slices/detailSlice';
+import { addMovieDetails } from '../Redux/Slices/detailSlice';
 
-const MovieCard = ({posterPath, title, avgRating}) => {
+
+const MovieCard = ({posterPath, title, avgRating,description}) => {
   const [isHover, setIsHover]=useState(false);
+  const dispatch=useDispatch();
+  const handleMovieDetail =()=>{
+    dispatch(addMovieDetails({title, description,posterPath}));
+    dispatch(toggleDetailView());
+    const setCardDetail=()=>{
+     
+    }
+  } 
   const handleHover1=()=>{
     setIsHover(true);
   }
@@ -10,7 +23,7 @@ const MovieCard = ({posterPath, title, avgRating}) => {
     setIsHover(false);
   }
   if(!posterPath){
-    return ( <div className='w-36 md:w-48 lg:w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onMouseOut={handleHover2} onMouseOver={handleHover1}> 
+    return (<div className='w-36 md:w-48 lg:w-48 pr-4 transition-transform duration-300 transform hover:scale-105  ' onClick={handleMovieDetail}  onMouseOut={handleHover2} onMouseOver={handleHover1}> 
     <img
     alt='Movie Card'
     src="https://media.comicbook.com/files/img/default-movie.png">
@@ -23,11 +36,16 @@ const MovieCard = ({posterPath, title, avgRating}) => {
      </>)}
     </div>
     
-</div>)
+    
+</div>
+
+
+ )
   }
  
   return (
-    <div className='w-36 md:w-48 lg:w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onMouseOut={handleHover2} onMouseOver={handleHover1}> 
+    <div className='w-36 md:w-48 lg:w-48 pr-4 transition-transform duration-300 transform hover:scale-105 ' onClick={handleMovieDetail} onMouseOut={handleHover2} onMouseOver={handleHover1}> 
+    
         <img
         alt='Movie Card'
         src={IMG_CDN_URL+posterPath}>
@@ -40,7 +58,10 @@ const MovieCard = ({posterPath, title, avgRating}) => {
          </>)}
         </div>
         
+        
     </div>
+    
+   
   )
 }
 
