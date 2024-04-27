@@ -8,7 +8,11 @@ const detailSlice=createSlice({
             title:null,
             description:null,
             poster_url:null,
+            id:null,
+            background_image:null,
+            avgRating:null
         },
+        trailerVideo:null,
     },
     reducers:{
         toggleDetailView:(state, action)=>{
@@ -16,8 +20,11 @@ const detailSlice=createSlice({
         },
         addMovieDetails:(state,action)=>{
             state.detail=action.payload;
-        }
+        },
+        addTrailerVideoDetails:(state,action)=>{
+            state.trailerVideo=action.payload;
+        },
     }
 })
 export default detailSlice.reducer;
-export const{toggleDetailView,addMovieDetails}=detailSlice.actions;
+export const{toggleDetailView,addMovieDetails, addTrailerVideoDetails}=detailSlice.actions;

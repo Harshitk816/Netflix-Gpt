@@ -17,6 +17,8 @@ const MovieList = ({title, movies}) => {
                             title={movie.original_title}
                             avgRating={movie.vote_average}
                             description={movie.overview}
+                            id={movie.id}
+                            background_image={movie.backdrop_path}
                             
                              />
                 })}

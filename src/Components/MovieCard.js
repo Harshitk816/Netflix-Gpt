@@ -4,13 +4,17 @@ import MovieDetail from './MovieDetail';
 import {useDispatch} from  "react-redux";
 import { toggleDetailView } from '../Redux/Slices/detailSlice';
 import { addMovieDetails } from '../Redux/Slices/detailSlice';
+import useDetailTrailer from '../CustomHooks/useDetailTrailer';
 
 
-const MovieCard = ({posterPath, title, avgRating,description}) => {
+const MovieCard = ({posterPath, title, avgRating, description, id, background_image}) => {
+  
   const [isHover, setIsHover]=useState(false);
   const dispatch=useDispatch();
   const handleMovieDetail =()=>{
-    dispatch(addMovieDetails({title, description,posterPath}));
+    
+    dispatch(addMovieDetails({title, description, posterPath, id, background_image, avgRating}));
+    
     dispatch(toggleDetailView());
     const setCardDetail=()=>{
      
